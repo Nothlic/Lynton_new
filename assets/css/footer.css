@@ -1,0 +1,92 @@
+footer {
+  width: 100vw;
+  bottom: 0px;
+  background: rgb(22, 23, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(22, 23, 36, 1) 0%,
+    rgba(69, 72, 113, 1) 100%
+  );
+}
+footer div {
+  background-color: var(--col-deepblue);
+  margin: -5px 0px 0px 0px;
+  padding: 0px;
+  color: #fff;
+  text-align: center;
+}
+svg {
+  width: 100%;
+  overflow: visible;
+}
+
+.wave {
+  animation: wave 3s linear;
+  animation-iteration-count: infinite;
+  fill: rgb(22, 23, 36);
+}
+.drop {
+  fill: var(--col-deepblue);
+  xfill: rgb(22, 23, 36);
+  animation: drop 8.2s linear infinite normal;
+  stroke: var(--col-deepblue);
+  stroke-width: 0.5;
+  transform: translateY(25px);
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+}
+.drop1 {
+}
+.drop2 {
+  animation-delay: 8s;
+  animation-duration: 8s;
+}
+.drop3 {
+  animation-delay: -7s;
+  animation-duration: 8.4s;
+}
+.drop4 {
+  animation-delay: 6.7s;
+}
+.drop5 {
+  animation-delay: 7.7s;
+  animation-duration: 8.1s;
+}
+.drop6 {
+  animation-delay: -7.1s;
+  animation-duration: 8.2s;
+}
+.gooeff {
+  filter: url(#goo);
+}
+#wave2 {
+  animation-duration: 10s;
+  animation-direction: reverse;
+  opacity: 0.6;
+}
+#wave3 {
+  animation-duration: 12s;
+  opacity: 0.3;
+}
+@keyframes drop {
+  0% {
+    transform: translateY(25px);
+  }
+  30% {
+    transform: translateY(-10px) scale(0.1);
+  }
+  30.001% {
+    transform: translateY(25px) scale(1);
+  }
+  70% {
+    transform: translateY(25px);
+  }
+  100% {
+    transform: translateY(-10px) scale(0.1);
+  }
+}
+@keyframes wave {
+  to {
+    transform: translateX(-100%);
+  }
+}

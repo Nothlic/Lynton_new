@@ -1,0 +1,268 @@
+#event-section {
+  background: rgb(0, 4, 40);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 4, 40, 1) 0%,
+    rgba(0, 78, 146, 1) 100%
+  );
+  height: 100vh;
+  @media screen and (max-width: $screen-lg) {
+    height: unset;
+  }
+
+  .event-wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    @media screen and (max-width: $screen-lg) {
+      flex-direction: column;
+      height: auto;
+    }
+
+    .event-stream {
+      flex: 1 1 75%;
+      width: 100%;
+      height: 100%;
+
+      .embed-responsive {
+        height: 100%;
+      }
+    }
+
+    .event-chat {
+      flex: 1 1 25%;
+      height: 100%;
+      width: 100%;
+      border-radius: 0 !important;
+
+      .menu-link {
+        width: 50%;
+        text-align: center;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.5);
+        color: white;
+        text-decoration: unset;
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.8);
+          color: #333;
+          font-weight: bold;
+        }
+
+        &.active {
+          background: rgba(255, 255, 255, 0.8);
+          color: #333;
+          font-weight: bold;
+        }
+      }
+
+      .chat-section-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 93vh;
+
+        .chat-wrapper {
+          flex: 1 1 95%;
+          overflow: scroll;
+
+          .chat-message {
+            display: flex;
+            padding: 15px 25px;
+            grid-gap: 15px;
+
+            .chat-profile-image {
+              img {
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                object-fit: cover;
+              }
+            }
+
+            .chat-content-wrapper {
+              .chat-name {
+                color: white;
+                font-size: 10px;
+                margin-bottom: 5px;
+              }
+
+              .chat {
+                width: 100%;
+                padding: 15px;
+                border: 1px solid #ebebeb;
+                border-radius: 25px;
+                border-top-left-radius: 0;
+                margin-bottom: 5px;
+                color: white;
+              }
+
+              .chat-date {
+                color: white;
+                font-size: 10px;
+                margin-bottom: 5px;
+              }
+            }
+          }
+        }
+
+        .chat-send-wrapper {
+          flex: 1 1 5%;
+          display: flex;
+          width: 100%;
+
+          input {
+            height: 100%;
+          }
+        }
+      }
+
+      .shopping-wrapper {
+        display: flex;
+        flex-direction: column;
+        overflow: scroll;
+        height: 93vh;
+
+        .shopping-item {
+          display: flex;
+          align-items: flex-start;
+          padding: 15px 25px;
+          grid-gap: 15px;
+
+          .shopping-img {
+            img {
+              width: 7rem;
+              height: 7rem;
+              border-radius: 15px;
+              object-fit: cover;
+            }
+          }
+          .shopping-info {
+            .item-name {
+              color: white;
+              font-size: 15px;
+              margin-bottom: 5px;
+            }
+
+            .item-description {
+              color: white;
+              font-size: 13px;
+              margin-bottom: 5px;
+              -webkit-line-clamp: 4;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+              display: -webkit-box;
+            }
+
+            .item-order-button {
+              border-radius: 25px !important;
+              background-color: rgba(40, 167, 69, 0.5);
+              font-size: 13px;
+
+              &:hover {
+                background-color: rgba(40, 167, 69, 0.8);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .category-wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bg-glass {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .category-item-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 55px;
+
+    .category-item {
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .category-img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+      }
+
+      .category-label {
+        font-size: 24px;
+        color: white;
+      }
+    }
+  }
+
+  .float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    left: 20px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 78, 146, 1);
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    z-index: 2;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(0, 78, 146, 0.5);
+    }
+
+    @media screen and (max-width: $screen-lg) {
+      right: 5px;
+      top: 10px;
+      left: unset;
+    }
+  }
+
+  .float-mobile {
+    display: none;
+    position: fixed;
+    width: 10px;
+    height: 60px;
+    left: 0px;
+    padding: 0 20px;
+    background-color: rgba(0, 78, 146, 0.5);
+    color: #fff;
+    text-align: center;
+    z-index: 2;
+    cursor: pointer;
+
+    @media screen and (max-width: $screen-lg) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      bottom: 0;
+      height: 95px;
+      top: 50%;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+    }
+  }
+}
