@@ -27,6 +27,14 @@ class Home extends CI_Controller
 		$this->load->view('layout/footer', $data);
 	}
 
+	public function tenant()
+    {
+        $data['url'] = 'tenant';
+        $this->load->view('layout/header');
+        $this->load->view('tenant');
+        $this->load->view('layout/footer', $data);
+    }
+
 	public function contact()
 	{
 		$this->form_validation->set_rules('firstName', 'First Name', 'required|trim');

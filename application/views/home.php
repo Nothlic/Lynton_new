@@ -7,9 +7,10 @@
                          <div class="banner-title">Lynton Event</div>
                          <div class="banner-sub-title">Virtual Exhibition & Conference</div>
                          <div class="banner-description">
-                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo corrupti dolorum illo corporis tenetur dignissimos. Dolores ipsa atque consequuntur tempora molestiae soluta corrupti exercitationem, enim architecto iure natus, voluptatem maiores!
+                             Find Perfect Online Eventn for Everything from Everywhere <br>
+                             Worry no more! Start here to find the perfect online event from the comfort of your home
                          </div>
-                         <div class="banner-button">Learn more</div>
+                         <a href="#register" class="banner-button" id="banner-button">Explore more</a>
                      </div>
 
                      <div class="globe-wrapper">
@@ -38,7 +39,7 @@
                          </div>
 
                          <div class="event-title">
-                             <h1 class="title-section">Fun</h1>
+                             <h1 class="title-section">Fun Event</h1>
                          </div>
                      </div>
 
@@ -48,7 +49,7 @@
                          </div>
 
                          <div class="event-title">
-                             <h1 class="title-section">Happy</h1>
+                             <h1 class="title-section">Happy Join</h1>
                          </div>
                      </div>
 
@@ -58,7 +59,7 @@
                          </div>
 
                          <div class="event-title">
-                             <h1 class="title-section">Free</h1>
+                             <h1 class="title-section">Free Entry</h1>
                          </div>
                      </div>
                  </div>
@@ -71,10 +72,10 @@
          <div class="event-wrapper">
              <div class="event-content-wrapper">
                  <div class="event-title">
-                     Events
+                     Our Latest Events
                  </div>
                  <div class="event-description">
-                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo commodi quod eius ipsum soluta. Ducimus molestias optio voluptates dolorum eos commodi id dolorem corporis asperiores velit sequi aut, maiores placeat!
+                     Breaking unique events. Transforming Event.
                  </div>
              </div>
              <div class="event-section-slider">
@@ -83,10 +84,10 @@
                          <img src="<?php echo base_url() ?>assets/img/exhibition.jpeg" alt="exhibition-image" />
                      </div>
                      <div class="event-slider-title">
-                         Exhibition 1
+                         Our Events
                      </div>
                      <div class="event-caption">
-                         23 Days to go
+                         Technology Event
                      </div>
                  </div>
                  <div class="event-section-slider-item">
@@ -94,10 +95,10 @@
                          <img src="<?php echo base_url() ?>assets/img/exhibition2.png" alt="exhibition-image" />
                      </div>
                      <div class="event-slider-title">
-                         Exhibition 1
+                         Our Events
                      </div>
                      <div class="event-caption">
-                         23 Days to go
+                         Fintech Event
                      </div>
                  </div>
                  <div class="event-section-slider-item">
@@ -105,10 +106,10 @@
                          <img src="<?php echo base_url() ?>assets/img/exhibition3.jpeg" alt="exhibition-image" />
                      </div>
                      <div class="event-slider-title">
-                         Exhibition 1
+                         Our Events
                      </div>
                      <div class="event-caption">
-                         23 Days to go
+                         Otomotive Event
                      </div>
                  </div>
                  <div class="event-section-slider-item">
@@ -116,10 +117,10 @@
                          <img src="<?php echo base_url() ?>assets/img/exhibition4.jpg" alt="exhibition-image" />
                      </div>
                      <div class="event-slider-title">
-                         Exhibition 1
+                         Our Events
                      </div>
                      <div class="event-caption">
-                         23 Days to go
+                         Culinary Event
                      </div>
                  </div>
              </div>
@@ -136,7 +137,7 @@
                          <div class="content">
                              <h2>01</h2>
                              <h3>Live Stream</h3>
-                             <p>Live stream and interacting with customer</p>
+                             <p>Live stream and interacting event</p>
                              <!-- <a href="#">Read More</a> -->
                          </div>
                      </div>
@@ -178,7 +179,7 @@
                  <div class="tenant-content">
                      <div class="tenant-content-title">Available Booths</div>
                      <div class="tenant-counter" data-target="60000">0</div>
-                     <div class="tenant-content-button">Join Us</div>
+                     <div class="tenant-content-button">Join Event</div>
                  </div>
              </div>
 
@@ -189,15 +190,15 @@
 
                  <div class="tenant-content">
                      <div class="tenant-content-title">Join From Home</div>
-                     <div class="tenant-counter" data-target="60000">0</div>
-                     <div class="tenant-content-button">Join Us</div>
+                     <div class="tenant-content-title"><b>Now</b></div>
+                     <div class="tenant-content-button">Join Event</div>
                  </div>
              </div>
          </div>
      </div>
 
 
-     <div class="default-section">
+     <div class="default-section" id="register">
          <div class="register-event-wrapper">
              <div class="container form-wrapper">
                  <h1 class="title-section">Register</h1>

@@ -313,4 +313,53 @@ class Auth extends CI_Controller
             redirect('auth');
         }
     }
+
+
+    public function registerTenant()
+    {
+        $this->form_validation->set_rules('name', 'Name', 'required|trim');
+        $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|is_unique[user.email]', [
+            'is_unique' => 'This email has already registered!'
+        ]);
+        $this->form_validation->set_rules('companyName', 'Company Name', 'required');
+        $this->form_validation->set_rules('phoneNumber', 'Phone Numbers', 'required');
+        $this->form_validation->set_rules('password', 'Password', 'required');
+
+        if ($this->form_validation->run() == false) {
+            $data['url'] = 'tenant';
+            $this->load->view('layout/header');
+            $this->load->view('tenant');
+            $this->load->view('layout/footer', $data);
+        } else {
+            $email = $this->input->post('email', true);
+            $data = [
+                'name' => htmlspecialchars($this->input->post('name', true)),
+                'companyName' => $this->input->post('companyName'),
+                'phoneNumber' => $this->input->post('phoneNumber'),
+                'description' => $this->input->post('description'),
+                'isNew' => 1,
+            ];
+
+            $this->db->insert('company', $data);
+
+            $company = $this->db->query('SELECT * FROM company ORDER BY id desc LIMIT 1')->row_array();
+
+            $dataRegister = [
+                'name' => htmlspecialchars($this->input->post('name', true)),
+                'email' => htmlspecialchars($email),
+                'image' => 'default.jpg',
+                'idCompany' => $company['id'],
+                'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT),
+                'role_id' => 3,
+                'is_active' => 1,
+                'date_created' => time()
+            ];
+
+            $this->db->insert('user', $dataRegister);
+
+
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Congratulation! your account has been created.</div>');
+            redirect('login');
+        }
+    }
 }

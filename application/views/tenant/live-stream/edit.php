@@ -8,13 +8,18 @@
     <div class="col-lg-6">
         <?= form_open_multipart('tenant/prosesEditLiveStream'); ?>
             <div class="form-group">
+                <label>Title</label>
+                <input type="text" class="form-control" id="title" name="title" placeholder="Title" value="<?php echo $youtube['title'] ?>">
+            </div>
+
+            <div class="form-group">
                 <label>Embed Code</label>
                 <input type="text" class="form-control" id="code" name="code" placeholder="Link Youtube" value="<?php echo $youtube['code'] ?>">
                 <input type="text" class="form-control" id="id" name="id" placeholder="Link Youtube" value="<?php echo $youtube['id'] ?>" hidden>
                 <?= form_error('link', '<small class="text-danger pl-3">', '</small>'); ?>
             </div>
 
-            <label>Is Active &nbsp;<small>Max(2)</small></label>
+            <label>Is Active</label>
             <div class="col-sm-12">
                 <label class="label-switch switch-primary">
                     <input type="checkbox" class="switch switch-bootstrap status" name="isActive" id="isActive" value="1"

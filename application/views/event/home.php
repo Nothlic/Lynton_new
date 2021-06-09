@@ -1,6 +1,4 @@
 <section id="home-event-section">
-
-
     <div class="page-wrapper chiller-theme">
         <a id="show-sidebar" class="btn btn-sm btn-dark" href="#" style="z-index:1;">
             <i class="fas fa-bars"></i>
@@ -73,13 +71,14 @@
             <div class="container-fluid">
                 <div class="default-section">
                     <div class="main-title-section text-left">
-                        New Event
+                        Promosi
                     </div>
                     <div class="banner-wrapper">
-                        <a href="#">
-                            <img src="https://placeimg.com/640/480/arch" class="image-slider" />
-                        </a>
-
+                        <?php foreach($promotions as $promotion){?>
+                            <a href="<?php echo base_url()?>event/promosi/<?php echo $promotion['id'] ?>">
+                                <img src="<?php echo base_url('assets/img/promotion/'). $promotion['image'];?>" class="image-slider" />
+                            </a>
+                        <?php }?>
                     </div>
                 </div>
                 <div class="default-section">
@@ -87,92 +86,64 @@
                         Special Buat Kamu
                     </div>
                     <div class="special-wrapper">
-                        <div class="special-item">
-                            <div class="special-image">
-                                <img src="https://placeimg.com/640/480/arch" />
-                            </div>
-                            <div class="special-title">Event</div>
-                        </div>
-                        <div class="special-item">
-                            <div class="special-image">
-                                <img src="https://placeimg.com/640/480/arch" />
-                            </div>
-                            <div class="special-title">Event</div>
-                        </div>
-                        <div class="special-item">
-                            <div class="special-image">
-                                <img src="https://placeimg.com/640/480/arch" />
-                            </div>
-                            <div class="special-title">Event</div>
-                        </div>
-                        <div class="special-item">
-                            <div class="special-image">
-                                <img src="https://placeimg.com/640/480/arch" />
-                            </div>
-                            <div class="special-title">Event</div>
-                        </div>
-                        <div class="special-item">
-                            <div class="special-image">
-                                <img src="https://placeimg.com/640/480/arch" />
-                            </div>
-                            <div class="special-title">Event</div>
-                        </div>
+                        <?php foreach($live_streams as $live_stream){?>
+                            <a href="<?php echo base_url('event/index/') . $live_stream['idCompany']?>">
+                                <div class="special-item">
+                                    <div class="special-image">
+                                        <img src="<?php echo base_url('assets/img/banner/') .$live_stream['banner'];?>" />
+                                    </div>
+                                    <div class="special-title">Event</div>
+                                </div>
+                            </a>
+                        <?php }?>
 
 
                     </div>
                 </div>
 
                 <div class="default-section">
-                    <div class="main-title-section text-left">
-                        Live
+                    <div class="d-flex justify-content-between filter-wrapper">
+                        <div class="main-title-section">
+                            Live
+                        </div>
+                        <div class="filter">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01">Category</label>
+                                </div>
+                                <select class="custom-select"  id="category" name="category">
+                                    <option value="" selected>All Categories</option>
+                                    <option value="Technology">Technology</option>
+                                    <option value="Food">Food</option>
+                                    <option value="Otomotive">Otomotive</option>
+                                    <option value="Fashion">Fashion</option>
+                                    <option value="Furniture">Furniture</option>
+                                    <option value="Fintech">Fintech</option>
+                                    <option value="Health">Health</option>
+                                    <option value="Academic">Academic</option>
+                                </select>
+                                <div class="input-group-append">
+                                    <button class="btn btn-secondary" type="button" id="filter">Filter</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="special-wrapper">
-                        <div class="special-item">
-                            <div class="special-image">
-                                <img src="https://placeimg.com/640/480/arch" />
-                            </div>
-                            <div class="special-title">Event</div>
-                        </div>
-                        <div class="special-item">
-                            <div class="special-image">
-                                <img src="https://placeimg.com/640/480/arch" />
-                            </div>
-                            <div class="special-title">Event</div>
-                        </div>
-                        <div class="special-item">
-                            <div class="special-image">
-                                <img src="https://placeimg.com/640/480/arch" />
-                            </div>
-                            <div class="special-title">Event</div>
-                        </div>
-                        <div class="special-item">
-                            <div class="special-image">
-                                <img src="https://placeimg.com/640/480/arch" />
-                            </div>
-                            <div class="special-title">Event</div>
-                        </div>
-                        <div class="special-item">
-                            <div class="special-image">
-                                <img src="https://placeimg.com/640/480/arch" />
-                            </div>
-                            <div class="special-title">Event</div>
-                        </div>
 
-
+                    <div class="special-wrapper" id="live">
                     </div>
                 </div>
 
-                <div class="default-section">
-                    <div class="main-title-section text-left">
-                        Promotion
-                    </div>
-                    <div class="banner-wrapper">
-                        <a href="#">
-                            <img src="https://placeimg.com/640/480/arch" class="image-slider" />
-                        </a>
-
-                    </div>
-                </div>
+<!--                <div class="default-section">-->
+<!--                    <div class="main-title-section text-left">-->
+<!--                        Artikel-->
+<!--                    </div>-->
+<!--                    <div class="article-wrapper">-->
+<!--                        <a href="#">-->
+<!--                            <img src="https://placeimg.com/640/480/arch" class="image-slider" />-->
+<!--                        </a>-->
+<!---->
+<!--                    </div>-->
+<!--                </div>-->
             </div>
 
         </main>

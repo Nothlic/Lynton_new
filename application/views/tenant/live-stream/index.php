@@ -19,6 +19,7 @@
                     <thead>
                         <tr>
                             <th>No.</th>
+                            <th>Title</th>
                             <th>Embed Code</th>
                             <th>Aksi</th>
                         </tr>
@@ -26,6 +27,7 @@
                     <tfoot>
                         <tr>
                             <th>No.</th>
+                            <th>Title</th>
                             <th>Embed Code</th>
                             <th>Aksi</th>
                         </tr>
@@ -38,6 +40,7 @@
 
                             <tr>
                                 <td><?php echo $no ?></td>
+                                <td><?php echo $u['title'] ?></td>
                                 <td><?php echo $u['code'] ?></td>
                                 <td>
                                     <div class="btn-group">

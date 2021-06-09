@@ -8,6 +8,11 @@
     <div class="col-lg-5">
         <?= form_open_multipart('tenant/createLiveStream'); ?>
             <div class="form-group">
+                <label>Title</label>
+                <input type="text" class="form-control" id="title" name="title" placeholder="Link Youtube">
+            </div>
+
+            <div class="form-group">
                 <label>Embed Code</label>
                 <input type="text" class="form-control" id="code" name="code" placeholder="Link Youtube">
                 <input type="text" class="form-control" id="idCompany" name="idCompany" value="<?= $user['idCompany'] ?>" placeholder="Link Youtube" hidden>
@@ -15,7 +20,7 @@
             </div>
 
             <div class="form-group">
-                <label>Is Active &nbsp;<small>Max(2)</small></label>
+                <label>Is Active</label>
                 <div class="col-sm-12">
                     <label class="label-switch switch-primary">
                         <input type="checkbox" class="switch switch-bootstrap status" name="isActive" id="isActive" value="1" >

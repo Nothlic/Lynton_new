@@ -4,9 +4,9 @@
         <div class="tenant-banner-wrapper">
             <div class="tenant-banner-content">
                 <div class="tenant-banner-title">Become A Tenant ?</div>
-                <div class="tenant-banner-button">
-                    <div class="banner-button">Learn more</div>
-                </div>
+                <a href="#register" class="tenant-banner-button">
+                    <div href="#register" class="banner-button">Join Now</div>
+                </a>
             </div>
         </div>
     </div>
@@ -19,7 +19,10 @@
                         Feature
                     </div>
                     <div class="tenant-descritpion-feature">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus unde soluta placeat odit voluptatum nemo voluptatibus quibusdam id corrupti dicta quam, accusamus nostrum nihil ipsam voluptates, consequatur sint ad quisquam.
+                        <ul>
+                            <li>Live Stream</li>
+                            <li>Report Attendance Event</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="tenant-slider-feauture">
@@ -55,7 +58,7 @@
                         Why Choose Lynton ?
                     </div>
                     <div class="tenant-descritpion-feature">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus unde soluta placeat odit voluptatum nemo voluptatibus quibusdam id corrupti dicta quam, accusamus nostrum nihil ipsam voluptates, consequatur sint ad quisquam.
+                        Lynton has a unique appeal in marketing your products during the COVID-19 pandemic
                     </div>
                 </div>
 
@@ -63,66 +66,65 @@
         </div>
     </div>
 
-    <div class="default-section type-grid">
-        <div class="container">
-            <div class="works-wrapper">
-                <div class="works-info-wrapper">
-                    <div class="works-title">How Does it Work?</div>
-                    <div class="works-description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, ratione eveniet? Nobis excepturi aliquid architecto sed obcaecati, voluptatum aspernatur? Culpa minima labore repudiandae voluptatum. In non modi odit asperiores nam?
-                    </div>
-                </div>
-
-                <div class="works-tutor-wrapper">
-                    <div class="works-tutor-item">
-                        <div class="works-tutor-icon">
-                            <img src="<?php echo base_url() ?>assets/img/camera.png" alt="camera" />
-                        </div>
-                        <div class="works-tutor-title">
-                            Tutor 1
-                        </div>
-                        <div class="works-tutor-desc">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci praesentium laboriosam, at porro iusto obcaecati itaque minima pariatur quasi iure vel dignissimos similique expedita aut maxime distinctio, ipsam accusamus? Voluptas.
-                        </div>
-                    </div>
-                    <div class="works-tutor-item">
-                        <div class="works-tutor-icon">
-                            <img src="<?php echo base_url() ?>assets/img/camera.png" alt="camera" />
-                        </div>
-                        <div class="works-tutor-title">
-                            Tutor 1
-                        </div>
-                        <div class="works-tutor-desc">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci praesentium laboriosam, at porro iusto obcaecati itaque minima pariatur quasi iure vel dignissimos similique expedita aut maxime distinctio, ipsam accusamus? Voluptas.
-                        </div>
-                    </div>
-                    <div class="works-tutor-item">
-                        <div class="works-tutor-icon">
-                            <img src="<?php echo base_url() ?>assets/img/camera.png" alt="camera" />
-                        </div>
-                        <div class="works-tutor-title">
-                            Tutor 1
-                        </div>
-                        <div class="works-tutor-desc">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci praesentium laboriosam, at porro iusto obcaecati itaque minima pariatur quasi iure vel dignissimos similique expedita aut maxime distinctio, ipsam accusamus? Voluptas.
-                        </div>
-                    </div>
-                    <div class="works-tutor-item">
-                        <div class="works-tutor-icon">
-                            <img src="<?php echo base_url() ?>assets/img/camera.png" alt="camera" />
-                        </div>
-                        <div class="works-tutor-title">
-                            Tutor 1
-                        </div>
-                        <div class="works-tutor-desc">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci praesentium laboriosam, at porro iusto obcaecati itaque minima pariatur quasi iure vel dignissimos similique expedita aut maxime distinctio, ipsam accusamus? Voluptas.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
+<!--    <div class="default-section type-grid">-->
+<!--        <div class="container">-->
+<!--            <div class="works-wrapper">-->
+<!--                <div class="works-info-wrapper">-->
+<!--                    <div class="works-title">How Does it Work?</div>-->
+<!--                    <div class="works-description">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!---->
+<!--                <div class="works-tutor-wrapper">-->
+<!--                    <div class="works-tutor-item">-->
+<!--                        <div class="works-tutor-icon">-->
+<!--                            <img src="--><?php //echo base_url() ?><!--assets/img/camera.png" alt="camera" />-->
+<!--                        </div>-->
+<!--                        <div class="works-tutor-title">-->
+<!--                            Tutor 1-->
+<!--                        </div>-->
+<!--                        <div class="works-tutor-desc">-->
+<!--                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci praesentium laboriosam, at porro iusto obcaecati itaque minima pariatur quasi iure vel dignissimos similique expedita aut maxime distinctio, ipsam accusamus? Voluptas.-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="works-tutor-item">-->
+<!--                        <div class="works-tutor-icon">-->
+<!--                            <img src="--><?php //echo base_url() ?><!--assets/img/camera.png" alt="camera" />-->
+<!--                        </div>-->
+<!--                        <div class="works-tutor-title">-->
+<!--                            Tutor 1-->
+<!--                        </div>-->
+<!--                        <div class="works-tutor-desc">-->
+<!--                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci praesentium laboriosam, at porro iusto obcaecati itaque minima pariatur quasi iure vel dignissimos similique expedita aut maxime distinctio, ipsam accusamus? Voluptas.-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="works-tutor-item">-->
+<!--                        <div class="works-tutor-icon">-->
+<!--                            <img src="--><?php //echo base_url() ?><!--assets/img/camera.png" alt="camera" />-->
+<!--                        </div>-->
+<!--                        <div class="works-tutor-title">-->
+<!--                            Tutor 1-->
+<!--                        </div>-->
+<!--                        <div class="works-tutor-desc">-->
+<!--                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci praesentium laboriosam, at porro iusto obcaecati itaque minima pariatur quasi iure vel dignissimos similique expedita aut maxime distinctio, ipsam accusamus? Voluptas.-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="works-tutor-item">-->
+<!--                        <div class="works-tutor-icon">-->
+<!--                            <img src="--><?php //echo base_url() ?><!--assets/img/camera.png" alt="camera" />-->
+<!--                        </div>-->
+<!--                        <div class="works-tutor-title">-->
+<!--                            Tutor 1-->
+<!--                        </div>-->
+<!--                        <div class="works-tutor-desc">-->
+<!--                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci praesentium laboriosam, at porro iusto obcaecati itaque minima pariatur quasi iure vel dignissimos similique expedita aut maxime distinctio, ipsam accusamus? Voluptas.-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!---->
+<!--    </div>-->
 
     <div class="default-section type-grid-video ">
         <div class="container">
@@ -175,7 +177,6 @@
                 <div class="own-event-information-wrapper">
                     <div class="own-event-title">Event Overview</div>
                     <div class="own-event-description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, cumque natus dignissimos explicabo possimus commodi earum maxime ipsa, deleniti a qui minus quisquam fugit libero nulla maiores in. Labore, tenetur!
                     </div>
                 </div>
 
@@ -277,11 +278,11 @@
         </div>
     </div>
 
-    <div class="default-section">
+    <div class="default-section" id="register">
         <div class="register-tenant-event-wrapper">
             <div class="container form-wrapper">
                 <h1 class="title-section text-white text-center">Register</h1>
-                <form method="post" action="<?= base_url('tenant/registerTenant'); ?>">
+                <form method="post" action="<?= base_url('auth/registerTenant'); ?>">
                     <div class="row-custom">
                         <div class="col-custom">
                             <div class="input-box-wrapper">

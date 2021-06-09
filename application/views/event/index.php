@@ -19,49 +19,17 @@
             <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="chat-section-wrapper">
-                        <div class="chat-wrapper">
-                            <div class="chat-message">
-                                <div class="chat-profile-image">
-                                    <img src="https://placeimg.com/100/100/people">
-                                </div>
-                                <div class="chat-content-wrapper">
-                                    <div class="chat-name">Athanasia Odelia</div>
-                                    <div class="chat type-words">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et</div>
-                                    <div class="chat-date">23 Feb 2021 10:00 WIB</div>
-                                </div>
-                            </div>
-
-                            <div class="chat-message">
-                                <div class="chat-profile-image">
-                                    <img src="https://placeimg.com/100/100/people">
-                                </div>
-                                <div class="chat-content-wrapper">
-                                    <div class="chat-name">Athanasia Odelia</div>
-                                    <div class="chat type-words">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et</div>
-                                    <div class="chat-date">23 Feb 2021 10:00 WIB</div>
-                                </div>
-                            </div>
-
-                            <div class="chat-message">
-                                <div class="chat-profile-image">
-                                    <img src="https://placeimg.com/100/100/people">
-                                </div>
-                                <div class="chat-content-wrapper">
-                                    <div class="chat-name">Athanasia Odelia</div>
-                                    <div class="chat type-words">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et</div>
-                                    <div class="chat-date">23 Feb 2021 10:00 WIB</div>
-                                </div>
-                            </div>
+                        <div class="chat-wrapper" id="chat-wrapper">
                         </div>
 
                         <div class="chat-send-wrapper" style="padding-top:10px">
                             <div class="input-group">
-                                <input hidden="" type="text" name="idUser" class="form-control idUser" id="idUser" value="12">
-                                <input hidden="" type="text" name="name" class="form-control name" id="name" value="ADMIN QUIZ">
-                                <input type="text" name="isi" placeholder="Type a message" aria-describedby="button-addon2" class="form-control rounded-0 border-0 py-4 philips-text-field isi">
-                                <!-- <textarea class="form-control rounded-0 border-0 py-4 philips-text-field"></textarea>-->
+                                <input hidden="" type="text" name="idCompany" class="form-control idCompany" id="idCompany" value="<?= $company['id'] ?>">
+                                <input hidden="" type="text" name="name" class="form-control name" id="name" value="<?= $user['name'] ?>">
+                                <input hidden="" type="text" name="image" class="form-control image" id="image" value="<?= $user['image'] ?>">
+                                <input type="text" name="text" placeholder="Type a message" aria-describedby="button-addon2" class="form-control rounded-0 border-0 py-4 philips-text-field text">
                                 <div class="input-group-append">
-                                    <button id="btn-chat" type="submit" class="btn philips-color-custom btn-chat">Kirim</button>
+                                    <button id="btn-chat" type="submit" class="btn philips-color-custom btn-chat">Kirim </button>
                                 </div>
                             </div>
                         </div>
@@ -69,84 +37,33 @@
                 </div>
                 <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                     <div class="shopping-wrapper">
-                        <div class="shopping-item">
-                            <div class="shopping-img">
-                                <img src="https://placeimg.com/100/100/animals" />
-                            </div>
-
-                            <div class="shopping-info">
-                                <div class="item-name">Cool Dog</div>
-                                <div class="item-description">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo voluptate officia delectus quibusdam dicta dolorem molestias quia nobis aut magnam provident, molestiae beatae. Maxime earum at accusamus necessitatibus ducimus eaque?
+                        <?php foreach ($products as $product) { ?>
+                            <div class="shopping-item">
+                                <div class="shopping-img">
+                                    <img src="<?php echo base_url('assets/img/produk/') . $product['image'] ?>" />
                                 </div>
 
-                                <div class="btn btn-success btn-block item-order-button">ORDER</div>
-                            </div>
-                        </div>
-                        <div class="shopping-item">
-                            <div class="shopping-img">
-                                <img src="https://placeimg.com/100/100/animals" />
-                            </div>
+                                <div class="shopping-info">
+                                    <div class="item-name"><?= $product['name'] ?></div>
+                                    <div class="item-description">
+                                        Rp. <?= number_format($product['price'], 2, ',', '.'); ?>
+                                    </div>
 
-                            <div class="shopping-info">
-                                <div class="item-name">Cool Dog</div>
-                                <div class="item-description">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo voluptate officia delectus quibusdam dicta dolorem molestias quia nobis aut magnam provident, molestiae beatae. Maxime earum at accusamus necessitatibus ducimus eaque?
+                                    <a href="https://api.whatsapp.com/send?phone=<?= $company['phoneNumber'] ?> " target="_blank" class="btn btn-success btn-block item-order-button">ORDER</a>
                                 </div>
-
-                                <div class="btn btn-success btn-block item-order-button">ORDER</div>
                             </div>
-                        </div>
-                        <div class="shopping-item">
-                            <div class="shopping-img">
-                                <img src="https://placeimg.com/100/100/animals" />
-                            </div>
-
-                            <div class="shopping-info">
-                                <div class="item-name">Cool Dog</div>
-                                <div class="item-description">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo voluptate officia delectus quibusdam dicta dolorem molestias quia nobis aut magnam provident, molestiae beatae. Maxime earum at accusamus necessitatibus ducimus eaque?
-                                </div>
-
-                                <div class="btn btn-success btn-block item-order-button">ORDER</div>
-                            </div>
-                        </div>
-                        <div class="shopping-item">
-                            <div class="shopping-img">
-                                <img src="https://placeimg.com/100/100/animals" />
-                            </div>
-
-                            <div class="shopping-info">
-                                <div class="item-name">Cool Dog</div>
-                                <div class="item-description">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo voluptate officia delectus quibusdam dicta dolorem molestias quia nobis aut magnam provident, molestiae beatae. Maxime earum at accusamus necessitatibus ducimus eaque?
-                                </div>
-
-                                <div class="btn btn-success btn-block item-order-button">ORDER</div>
-                            </div>
-                        </div>
-                        <div class="shopping-item">
-                            <div class="shopping-img">
-                                <img src="https://placeimg.com/100/100/animals" />
-                            </div>
-
-                            <div class="shopping-info">
-                                <div class="item-name">Cool Dog</div>
-                                <div class="item-description">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo voluptate officia delectus quibusdam dicta dolorem molestias quia nobis aut magnam provident, molestiae beatae. Maxime earum at accusamus necessitatibus ducimus eaque?
-                                </div>
-
-                                <div class="btn btn-success btn-block item-order-button">ORDER</div>
-                            </div>
-                        </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="float">
-        <i class="fas fa-home"></i>
-    </div>
+    <a href="<?php echo base_url() ?>event/home" class="text-white">
+        <div class="float">
+            <i class="fas fa-home"></i>
+        </div>
+    </a>
+
 
     <div class="float-mobile">
         MENU

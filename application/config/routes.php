@@ -57,3 +57,4 @@ $route['translate_uri_dashes'] = false;
 $route['login'] = 'auth/index';
 $route['questionnaire'] = 'event/questionnaire';
 $route['questionnaire-tenant'] = 'event/questionnaireTenant';
+$route['tenant'] = 'home/tenant';
